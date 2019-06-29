@@ -26,7 +26,7 @@ gulp.task("watch", function() {
     gulp.start("html");
   });
 
-  watch(__dirname + "/app/assets/styles/**/*.css", function() {
+  watch(__dirname + "/app/assets/styles/**/*.pcss", function() {
     gulp.start("styles");
   });
 });
