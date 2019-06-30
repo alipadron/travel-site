@@ -9,17 +9,17 @@ gulp.task("watch", function() {
       baseDir: "app"
     }
   })
-  watch(__dirname + "/app/index.html", function() {
+  watch("./app/index.html", function() {
     browserSync.reload();
   });
 
-  watch(__dirname + "/app/assets/styles/**/*.pcss", function() {
+  watch("./app/assets/styles/**/*.pcss", function() {
     gulp.start("cssInject");
   });
 });
 
 gulp.task('cssInject', ['styles'], function() {
   return gulp
-    .src(__dirname + '/app/temp/styles/styles.css')
+    .src('./app/temp/styles/styles.css')
     .pipe(browserSync.stream());
 });
