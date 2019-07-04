@@ -70,6 +70,8 @@
 var $ = __webpack_require__(1);
 var Person = __webpack_require__(2);
 
+alert('ASDASSAD');
+
 var p1 = new Person('Ali Padrón', 'green');
 p1.greet();
 
